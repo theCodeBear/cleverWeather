@@ -10,8 +10,8 @@ var Forecast = require('../index');
 var options = {
   APIKey: process.env.FORECAST_API_KEY
 },
-    latitude = 6.235925,
-    longitude = -75.575136,
+    latitude = 37.7833,
+    longitude = 122.4167,
     forecast = new Forecast(options);
 
 if ( ! process.env.FORECAST_API_KEY) {
@@ -33,7 +33,7 @@ describe('Forecast', function () {
     it('should be able to specify blocks to exclude via options param', function (done) {
       var time = new Date().setDate(0); // lets use an arbitrary date
       var options = {
-        exclude: 'minutely,hourly,daily,flags,alerts'
+        exclude: 'minutely,daily,flags,alerts'
       };
       forecast.get(latitude, longitude, options, function (err, res, data) {
         if (err) throw err;
@@ -42,9 +42,9 @@ describe('Forecast', function () {
         res.should.not.equal.null;
         data.should.not.equal.null;
         data.should.not.have.property('alerts');
-        data.should.have.property('currently');
+        data.should.not.have.property('currently');
         data.should.not.have.property('minutely');
-        data.should.not.have.property('hourly');
+        data.should.have.property('hourly');
         data.should.not.have.property('daily');
         data.should.not.have.property('flags');
         done();
@@ -53,7 +53,7 @@ describe('Forecast', function () {
     it('should be able to specify multiple options via options param', function (done) {
       var time = new Date().setDate(0); // lets use an arbitrary date
       var options = {
-        exclude: 'minutely,hourly,daily,flags,alerts',
+        exclude: 'minutely,daily,flags,alerts',
         units: 'si'
       };
       forecast.get(latitude, longitude, options, function (err, res, data) {
@@ -65,7 +65,7 @@ describe('Forecast', function () {
         data.should.not.have.property('alerts');
         data.should.have.property('currently');
         data.should.not.have.property('minutely');
-        data.should.not.have.property('hourly');
+        data.should.have.property('hourly');
         data.should.not.have.property('daily');
         data.should.not.have.property('flags');
         done();
