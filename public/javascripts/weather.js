@@ -14,7 +14,7 @@ var options = {
     longitude = 122.4167,
     forecast = new Forecast(options);
 
-if ( ! process.env.a460b122b56d6a8774c447d1b123a4b1) {
+if ( ! process.env.FORECAST_API_KEY) {
   throw new Error('tests expect a FORECAST_API_KEY to be set in your environment variables');
 }
 
