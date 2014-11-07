@@ -137,6 +137,43 @@ vertical-align:top;}
   padding-top: 2em;
 }
 
+.carousel-indicators {
+  bottom:-50px;
+}
+
+.carousel-indicators li {
+  border-color:#999;
+  background-color:#ccc;
+}
+
+.carousel-inner {
+   margin-bottom:50px;
+}
+
+
+
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  filter: none;
+  background-repeat: none;
+}
+
+.carousel-control.left {
+  left: 0;
+  right: auto;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  filter: none;
+  background-repeat: none;
+}
+
 /*
  * Footer
  */
