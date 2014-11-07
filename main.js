@@ -32,6 +32,10 @@ $(function() {
 //     time = "T18:00:00";
 
   $.getJSON(url + apiKey + "/" + lati + "," + longi + "," + date + "T08:00:00" + '?callback=?', function(data) {
+      var clouds = data.currently.cloudCover;
+      var weatherImg = "";
+      if (clouds < 0.3)
+        weatherImg = "";
       $('#slide0').html('<h1 class="cover-heading temp-num" >' + Math.round(data.currently.temperature) + ' &#xb0<span class="subscript"> f</span></h1>' +
                     '<i class="fa fa-cloud fa-5x cloudy animated swing"></i>' +
                     '<p class="lead">Cloudy with a chance of meatballs</p>' +
@@ -40,7 +44,7 @@ $(function() {
                     '</p>' +
                     '8:00am');
 
-      console.log("8am: " + data.currently.temperature);
+      console.log("8am: " + data.currently.temperature + "\n" + data.currently.precipProbability + "\n" + data.currently.cloudCover);
   });
 // }));
 
@@ -55,7 +59,7 @@ $(function() {
                     '</p>' +
                     '1:00pm');
                     
-      console.log("1pm: " + data.currently.temperature);
+      console.log("1pm: " + data.currently.temperature + "\n" + data.currently.precipProbability + "\n" + data.currently.cloudCover);
   });
 // }
 
@@ -69,7 +73,7 @@ $(function() {
                     ' You should probably wear<br /><img src="img/t-shirt.png" class="icon">' +
                     '</p>' +
                     '6:00pm');
-      console.log("6pm: " + data.currently.temperature);
+      console.log("6pm: " + data.currently.temperature + "\n" + data.currently.precipProbability + "\n" + data.currently.cloudCover);
   });
 // }
 
