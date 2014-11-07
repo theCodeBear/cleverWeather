@@ -25,13 +25,42 @@
         <div class="cover-container">
 
           <div class="inner cover">
-            <h1 class="cover-heading temp-num" id="weather"><span class="subscript"> f</span></h1>
-            <i class="fa fa-cloud fa-5x cloudy animated swing"></i>
-            <p class="lead">Cloudy with a chance of meatballs</p>
-            <p class="lead">
-              You should probably wear<br />
-              <img src="img/t-shirt.png" class="icon">
-            </p>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <h1 class="cover-heading temp-num" id="weather"><span class="subscript"> </span></h1>
+                    <i class="fa fa-cloud fa-5x cloudy animated swing"></i>
+                    <p class="lead">Cloudy with a chance of meatballs</p>
+                    <p class="lead">
+                      You should probably wear<br /><img src="img/t-shirt.png" class="icon">
+                    </p>
+                </div>
+                <div class="item">
+                  <h1 class="cover-heading temp-num" id="weather"><span class="subscript"> </span></h1>
+                    <i class="fa fa-cloud fa-5x cloudy animated swing"></i>
+                    <p class="lead">Cloudy with a chance of meatballs</p>
+                    <p class="lead">
+                      You should probably wear<br /><img src="img/t-shirt.png" class="icon">
+                    </p>
+                </div>
+              </div>
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           </div>
         <!-- <p id="weather">Here's the weather:</p>
     	<button onclick="b()">Submit</button> -->
@@ -50,5 +79,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="main.js"></script>
+    <script src="ui.js"></script>
   </body>
 </html>
