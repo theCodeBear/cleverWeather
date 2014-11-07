@@ -17,6 +17,10 @@
   </head>
 
   <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
 
     <div class="site-wrapper">
 
@@ -30,10 +34,11 @@
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
                   <h1 class="cover-heading temp-num" id="weather"><span class="subscript"> </span></h1>
-                    <i class="fa fa-cloud fa-5x cloudy animated swing"></i>
-                    <p class="lead">Cloudy with a chance of meatballs</p>
+                    <img src="img/sort-of-cloudy.png" class="animated swing weather-icon">
+                    <p class="lead">Cloudy with a chance of meatballs<br />
+                    You should probably wear<br /></p>
                     <p class="lead">
-                      You should probably wear<br /><img src="img/t-shirt.png" class="icon">
+                      <img src="img/t-shirt.png" class="icon">
                     </p>
                 </div>
                 <div class="item">
@@ -64,11 +69,6 @@
           </div>
         <!-- <p id="weather">Here's the weather:</p>
     	<button onclick="b()">Submit</button> -->
-          <div class="mastfoot">
-            <div class="inner">
-              <p><a href="#">Ryan</a> | <a href="#">Todd</a></p>
-            </div>
-          </div>
 
         </div>
 
@@ -77,8 +77,8 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="main.js"></script>
     <script src="ui.js"></script>
+    <script src="preloader.js"></script>
   </body>
 </html>
