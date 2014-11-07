@@ -33,6 +33,7 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  overflow: hidden;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -130,6 +131,13 @@ vertical-align:top;}
   color:white;
 }
 
+.weather-icon {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
 .icon {
   width: 200px;
   height: auto;
@@ -215,4 +223,28 @@ vertical-align:top;}
   .cover-container {
     width: 700px;
   }
+}
+
+/* Preloader */
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image:url(../img/status.gif); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
